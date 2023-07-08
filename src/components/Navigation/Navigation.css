@@ -1,0 +1,89 @@
+.navigation{
+  display: none;
+  z-index: 1;
+}
+
+.navigation__overlay{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  background-color: #000000;
+  opacity: 0.3;
+}
+
+.navigation__container{
+  padding-top: 159px;
+  padding-bottom: 90px;
+  width: 520px;
+  min-height: 100vh;
+  background-color: #202020;
+  position: fixed;
+  top: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navigation__close-button{
+  border: none;
+  width: 22px;
+  height: 22px;
+  background-image: url(../../images/burgerdelete.svg);
+  background-position: center;
+  position: absolute;
+  top: 27px;
+  right: 27px;
+}
+
+.navigation__close-button:hover{
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+.navigation__nav{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 28px;
+}
+
+.navigation__link{
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  color: #FFFFFF;
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+}
+
+.navigation__link:hover{
+  border-bottom: 2px solid #FFFFFF;
+}
+
+.navigation__account-button{
+  text-decoration: none;
+}
+
+
+@media screen and (max-width: 660px) {
+  .navigation__container{
+    padding-top: 144px;
+    padding-bottom: 46px;
+    width: 320px;
+  }
+
+  .navigation__nav{
+    gap: 23px;
+  }
+
+  .navigation__close-button{
+    top: 18px;
+    right: 18px;
+  }
+}

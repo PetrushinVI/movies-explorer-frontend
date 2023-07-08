@@ -1,0 +1,170 @@
+.about{
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  padding: 110px 70px;
+  max-width: 1280px;
+  min-width: 320px;
+  width: 100%;
+}
+
+.about__description-container{
+  display: flex;
+  gap: 52px;
+  padding-top: 70px;
+}
+
+.about__description{
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+}
+
+.about__title{
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: -0.04em;
+  color: #FFFFFF;
+}
+
+.about__text{
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: #FFFFFF;
+}
+
+.about__time-container{
+  display: flex;
+  padding-top: 110px;
+}
+
+.about__backend{
+  width: calc(100% / 5);
+  text-align: center;
+}
+
+.about__frontend{
+  width: calc(100% - (100% / 5));
+  text-align: center;
+}
+
+.about__week{
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  text-align: center;
+  color: #000000;
+  background-color: #3DDC84;
+  min-height: 36px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 14px;
+}
+
+.about__week_frontend{
+  background-color: #303030;
+  color: #FFFFFF;
+}
+
+.about__tech{
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  color: #8B8B8B;
+}
+
+@media screen and (max-width: 1023px) {
+  .about{
+    padding: 90px 50px;
+  }
+  .about__description-container{
+    gap: 30px;
+    padding-top: 60px;
+  }
+}
+
+@media screen and (max-width: 770px){
+  .about{
+    padding: 93px 50px;
+  }
+
+  .about__description-container {
+    padding-top: 70px;
+    gap: 37px;
+  }
+
+  .about__description{
+    gap: 22px;
+  }
+
+  .about__text{
+    line-height: 18px;
+    font-size: 12px;
+  }
+
+  .about__time-container{
+    padding-top: 93px;
+  }
+
+  .about__backend{
+    width: calc(106% / 5);
+  }
+}
+
+@media screen and (max-width: 660px) {
+  .about{
+    padding: 70px 18px;
+  }
+
+  .about__title{
+    font-size: 18px;
+    line-height: normal;
+  }
+
+  .about__description{
+    gap: 16px;
+  }
+
+  .about__text{
+    line-height: 16px;
+    font-size: 11px;
+  }
+
+  .about__description-container{
+    flex-direction: column;
+    gap: 56px;
+    padding-top: 60px;
+  }
+
+  .about__week{
+    font-size: 11px;
+    line-height: 13px;
+    margin-bottom: 10px;
+    min-height: 35px;
+  }
+
+  .about__backend{
+    width: 100px;
+  }
+
+  .about__frontend{
+    width: calc(100% - 100px);
+    text-align: center;
+  }
+
+  .about__tech{
+    font-size: 11px;
+    line-height: 13px;
+  }
+
+  .about__time-container{
+    padding-top: 60px;
+  }
+}

@@ -1,0 +1,78 @@
+.card{
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  background-color: #222222;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.card__image{
+  width: 100%;
+  height: 151px;
+  object-fit: cover;
+}
+
+.card__name{
+  font-style: normal;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 16px;
+  color: #FFFFFF;
+}
+
+.card__description{
+  display: flex;
+  justify-content: space-between;
+  margin: 14px 12px 0;
+}
+
+.card__duration{
+  display: flex;
+  align-items: center;
+  margin: 10px 12px 14px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 13px;
+  color: #8B8B8B;
+}
+
+.card__like{
+  border: none;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #FFFFFF;
+  background-image: url(../../images/checkfilm.svg);
+  background-position: -5.9px -3px;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+.card__like:hover{
+  opacity: 0.7;
+}
+
+.card__like_type_active{
+  background-image: url(../../images/activecheckfilm.svg);
+}
+
+.card__like_type_delete{
+  background-image: url(../../images/deleteicon.svg);
+  border-radius: 0;
+  background-color: #222222;
+  background-position: center;
+}
+
+@media screen and (max-width: 1200px) {
+  .card__image {
+    height: 190px;
+  }
+}
+
+@media screen and (max-width: 660px) {
+  .card__image {
+    height: 168px;
+  }
+}

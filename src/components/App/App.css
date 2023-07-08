@@ -1,0 +1,20 @@
+.page {
+  background-color: #202020;
+  min-height: 100vh;
+  font-family: 'Inter', Arial, sans-serif;
+}
+
+.page__content {
+  width: 100%;
+  position: relative;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.inactive-button {
+  pointer-events: none;
+}

@@ -1,0 +1,33 @@
+.main__title{
+  padding-bottom: 23px;
+  border-bottom: 1px solid #FFFFFF;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 27px;
+  letter-spacing: -0.04em;
+  color: #FFFFFF;
+}
+
+.main__title_theme_white{
+  border-bottom: 1px solid #FFFFFF;
+}
+
+@media screen and (max-width: 770px){
+  .main__title{
+    padding-bottom: 21px;
+  }
+}
+
+@media screen and (max-width: 330px){
+  .main__title{
+    font-size: 18px;
+    line-height: normal;
+    padding-bottom: 29px;
+    border-bottom: 1px solid #000000;
+  }
+
+  .main__title_theme_white{
+    border-bottom: 1px solid #FFFFFF;
+  }
+}
