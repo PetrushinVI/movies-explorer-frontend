@@ -5,12 +5,13 @@
   background-color: #222222;
   border-radius: 10px;
   overflow: hidden;
+  width: 270px;
 }
 
 .card__image{
   width: 100%;
   height: 151px;
-  object-fit: cover;
+  object-fit: fill;
 }
 
 .card__name{
@@ -19,6 +20,7 @@
   font-size: 13px;
   line-height: 16px;
   color: #FFFFFF;
+  max-width: 230px;
 }
 
 .card__description{
@@ -65,9 +67,22 @@
   background-position: center;
 }
 
+
 @media screen and (max-width: 1200px) {
   .card__image {
     height: 190px;
+  }
+}
+
+@media screen and (max-width: 929px){
+  .card{
+    width: 339px;
+  }
+}
+
+@media screen and (max-width: 762px){
+  .card{
+    width: 300px;
   }
 }
 

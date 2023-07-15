@@ -84,6 +84,7 @@
   font-weight: 400;
   font-size: 14px;
   line-height: 17px;
+  margin-left: 6px;
 }
 
 .form__link:hover {
@@ -109,7 +110,7 @@
   font-weight: 400;
   font-size: 14px;
   line-height: 17px;
-  color: white;
+  color: #FFFFFF;
   background-color: #2F2F2F;
   border: none;
   border-radius: 8px;

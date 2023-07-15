@@ -26,6 +26,11 @@
   outline: none;
   background-color: inherit;
   margin: 0 30px 0 25px;
+  color: #FFFFFF;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
 }
 
 .search-form__input::placeholder{
@@ -33,12 +38,7 @@
   font-weight: 400;
   font-size: 18px;
   line-height: 20px;
-  color: #A0A0A0;
-}
-
-.search-form__input:focus{
-  outline: 1px solid #E8E8E8;
-  border-radius: 5px;
+  color: #8B8B8B;
 }
 
 .search-form__button{
@@ -63,6 +63,16 @@
   opacity: 0.7;
 }
 
+.search-form__error{
+  margin-top: 3px;
+  text-align: center;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  color: red;
+}
+
 @media screen and (max-width: 1150px) {
   .search-form{
     padding: 70px 10px 69px;
@@ -78,7 +88,7 @@
 
 @media screen and (max-width: 660px) {
   .search-form{
-    padding: 80px 0px 45px;
+    padding: 80px 0 45px;
     margin: 0 10px;
   }
 

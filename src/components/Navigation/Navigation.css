@@ -1,5 +1,5 @@
 .navigation{
-  display: none;
+  display: flex;
   z-index: 1;
 }
 
@@ -33,6 +33,7 @@
   border: none;
   width: 22px;
   height: 22px;
+  background: none;
   background-image: url(../../images/burgerdelete.svg);
   background-position: center;
   position: absolute;
@@ -62,7 +63,7 @@
   border-bottom: 2px solid transparent;
 }
 
-.navigation__link:hover{
+.navigation__link_active{
   border-bottom: 2px solid #FFFFFF;
 }
 

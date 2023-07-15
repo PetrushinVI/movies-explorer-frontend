@@ -6,13 +6,21 @@ import Navigation from '../Navigation/Navigation';
 import AccountButton from '../AccountButton/AccountButton';
 
 
-function Header() {
+function Header({ loggedIn }) {
 
-  const [isLoggedIn, setIsLoggedIn] = useState(true);
+  const [clicked, setClicked] = useState(false);
+
+  function handleOpenMenu() {
+    setClicked(true);
+  }
+
+  function handleCloseMenu() {
+    setClicked(false);
+  }
 
   return(
     <>
-      {!isLoggedIn ? (
+      {!loggedIn ? (
         <header className='header'>
           <Link to='/' className='header__logo'>
             <img src={logo} alt='Логотип' />
@@ -40,13 +48,12 @@ function Header() {
                 Сохранённые фильмы
               </Link>
             </div>
-            <Link to='/profile' className='header__account-button'>
+            <div className='header__account-button'>
               <AccountButton />
-            </Link>
+            </div>
           </nav>
-
-          <button className='header__burger-button'></button>
-          <Navigation />
+          <button className='header__burger-button' onClick={handleOpenMenu} ></button>
+          {clicked ? <Navigation handleCloseMenu={handleCloseMenu} /> : ''}
         </header>
       )}
     </>

@@ -1,0 +1,92 @@
+.popup {
+  visibility: hidden;
+  opacity: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.popup_opened {
+  visibility: visible;
+  opacity: 1;
+}
+
+.popup__container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  border-radius: 10px;
+  background-color: #202020;
+  width: 100%;
+  max-width: 430px;
+  padding: 34px 36px;
+  margin: 0 auto;
+}
+
+.popup__close-button {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 10px;
+  right: 10px;
+  border: none;
+  background: transparent;
+  background-image: url(../../images/burgerdelete.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+}
+
+.popup__close-button:hover {
+  opacity: 0.6;
+}
+
+.popup__title {
+  padding: 0;
+  margin: 0;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 29px;
+  text-align: center;
+  color: #FFFFFF;
+}
+
+
+@media screen and (max-width: 767px) {
+  .popup__container {
+    padding: 25px 22px;
+    max-width: 282px;
+  }
+
+  .popup__close-button {
+    width: 20px;
+    height: 20px;
+    right: 0;
+  }
+
+  .popup__close-button:before {
+    height: 28px;
+    border-width: 1px;
+  }
+
+  .popup__close-button:after {
+    height: 28px;
+    border-width: 1px;
+  }
+
+  .popup__title {
+    margin-bottom: 25px;
+    font-size: 20px;
+    line-height: 24px;
+  }
+}
