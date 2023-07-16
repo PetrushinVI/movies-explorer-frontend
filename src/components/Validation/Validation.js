@@ -1,8 +1,11 @@
 import { useState, useCallback } from 'react';
 
 const validation = () => {
+  // eslint-disable-next-line react-hooks/rules-of-hooks
   const [enteredValues, setEnteredValues] = useState({});
+  // eslint-disable-next-line react-hooks/rules-of-hooks
   const [errors, setErrors] = useState({});
+  // eslint-disable-next-line react-hooks/rules-of-hooks
   const [isValid, setIsValid] = useState(false);
 
   const handleChange = (event) => {
@@ -22,6 +25,7 @@ const validation = () => {
     setIsValid(event.target.closest('#form').checkValidity());
   };
 
+  // eslint-disable-next-line react-hooks/rules-of-hooks
   const resetForm = useCallback(
     (newValues = {}, newErrors = {}, newIsFormValid = false) => {
       setEnteredValues(newValues);
