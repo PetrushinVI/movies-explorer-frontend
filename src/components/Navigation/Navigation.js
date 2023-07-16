@@ -1,29 +1,44 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import './Navigation.css';
 import AccountButton from '../AccountButton/AccountButton';
 
-function Navigation() {
+function Navigation({ handleCloseMenu }) {
+
   return (
     <div className='navigation'>
-      <div className="navigation__overlay"></div>
+      <div className="navigation__overlay" onClick={handleCloseMenu}></div>
       <div className='navigation__container'>
-        <button className='navigation__close-button'></button>
+        <button className='navigation__close-button' onClick={handleCloseMenu}></button>
         <nav className="navigation__nav">
-          <Link to="/"  className="navigation__link">
+          <NavLink
+            exact
+            to="/"
+            className="navigation__link"
+            activeClassName="navigation__link_active"
+            onClick={handleCloseMenu}>
             Главная
-          </Link>
-          <Link to="/movies"  className="navigation__link">
+          </NavLink>
+          <NavLink
+            to="/movies"
+            className="navigation__link"
+            activeClassName="navigation__link_active"
+            onClick={handleCloseMenu}>
             Фильмы
-          </Link>
-          <Link to="/saved-movies"  className="navigation__link">
+          </NavLink>
+          <NavLink
+            to="/saved-movies"
+            className="navigation__link"
+            activeClassName="navigation__link_active"
+            onClick={handleCloseMenu}>
             Сохранённые фильмы
-          </Link>
+          </NavLink>
         </nav>
-        <Link to='/profile' className='navigation__account-button'>
+        <Link to='/profile' className='navigation__account-button' onClick={handleCloseMenu} >
           <AccountButton />
         </Link>
       </div>
+
     </div>
   );
 }

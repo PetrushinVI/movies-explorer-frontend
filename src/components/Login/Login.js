@@ -1,25 +1,57 @@
 import React from 'react';
 import './Login.css';
 import Form from '../Form/Form';
+import { EMAIL_REGEX } from '../../utils/constants';
+import validation from '../Validation/Validation';
 
+function NotFound({ onAuthorize, loading }) {
 
-function NotFound() {
+  const { enteredValues, errors, handleChange, isValid } = validation();
+
+  function handleSubmit(env) {
+    env.preventDefault();
+    onAuthorize({
+      email: enteredValues.email,
+      password: enteredValues.password,
+    });
+  }
+
   return(
     <Form
       title="Рады видеть!"
+      onSubmit={handleSubmit}
+      disabled={!isValid}
+      loading={loading}
       buttonText="Войти"
       question="Еще не зарегистрированы?"
-      linkText=" Регистрация"
-      link="/signup">
+      link="/signup"
+      linkText=" Регистрация">
       <label className="form__field">
         E-mail
-        <input name="email" className="form__input" id="email-input" type="text" required />
-        <span className="form__input-error">Что-то пошло не так...</span>
+        <input
+          type="text"
+          className="form__input"
+          name="email"
+          id="email-input"
+          onChange={handleChange}
+          pattern={EMAIL_REGEX}
+          value={enteredValues.email || ''}
+          required
+        />
+        <span className="form__input-error">{errors.email}</span>
       </label>
       <label className="form__field">
         Пароль
-        <input name="password" className="form__input" id="password-input" type="password" />
-        <span className="form__input-error">Что-то пошло не так...</span>
+        <input
+          type="password"
+          className="form__input"
+          name="password"
+          id="password-input"
+          onChange={handleChange}
+          value={enteredValues.password || ''}
+          required
+        />
+        <span className="form__input-error">{errors.password}</span>
       </label>
     </Form>
   )
